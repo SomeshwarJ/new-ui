@@ -250,6 +250,63 @@
         }
       ],
       "payload": "{\n  \"model\": \"claude-3-5-sonnet-20241022\",\n  \"messages\": [{\"role\": \"user\", \"content\": \"{{prompt}}\"}],\n  \"max_tokens\": {{max_tokens}}\n}"
+    },
+    {
+      "id": "8085",
+      "name": "test_1",
+      "modelId": "test_1",
+      "description": "test_1",
+      "modelLink": "http://localhost:5173/persona/admin/models",
+      "type": "LLM",
+      "propertyKey": "completion",
+      "maxTokens": "1280000",
+      "retirementDate": "2027-01-01",
+      "togglePlayground": true,
+      "toggleBYA": true,
+      "toggleAPI": true,
+      "selectedFormats": [
+        "pdf",
+        "json"
+      ],
+      "hyperparams": [
+        {
+          "id": 1,
+          "label": "max_tokens",
+          "type": "Integer",
+          "min": "2048",
+          "max": "65535",
+          "default": "10000",
+          "optional": false
+        },
+        {
+          "id": 2,
+          "label": "temperature",
+          "type": "Float",
+          "min": "0.0",
+          "max": "1",
+          "default": "0.5",
+          "optional": false
+        },
+        {
+          "id": 3,
+          "label": "top_p",
+          "type": "Float",
+          "min": "0",
+          "max": "1",
+          "default": "0.95",
+          "optional": true
+        }
+      ],
+      "payload": "",
+      "status": "pending",
+      "vendor": "—",
+      "version": "v1.0",
+      "contextWindow": "—",
+      "costPer1M": "—",
+      "latency": "—",
+      "usage": "—",
+      "tags": [],
+      "note": null
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
