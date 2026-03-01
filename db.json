@@ -1,0 +1,256 @@
+{
+  "models": [
+    {
+      "id": "1",
+      "name": "Gemini 1.5 Pro",
+      "modelId": "gemini-1.5-pro",
+      "status": "restricted",
+      "vendor": "Google",
+      "type": "LLM",
+      "version": "v0.01",
+      "contextWindow": "1M",
+      "costPer1M": "$7.00",
+      "latency": "1.5s",
+      "usage": "—",
+      "description": "Google's most capable multimodal model with a 1M context window.",
+      "modelLink": "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro",
+      "propertyKey": "completion",
+      "maxTokens": "65536",
+      "retirementDate": "",
+      "togglePlayground": true,
+      "toggleBYA": false,
+      "toggleAPI": true,
+      "selectedFormats": [
+        "pdf",
+        "json"
+      ],
+      "tags": [],
+      "note": "Rejected — requires re-submission.",
+      "hyperparams": [
+        {
+          "id": 1,
+          "label": "max_tokens",
+          "type": "Integer",
+          "min": "2048",
+          "max": "65535",
+          "default": "10000",
+          "optional": false
+        },
+        {
+          "id": 2,
+          "label": "temperature",
+          "type": "Float",
+          "min": "0.0",
+          "max": "1",
+          "default": "0.5",
+          "optional": false
+        },
+        {
+          "id": 3,
+          "label": "top_p",
+          "type": "Float",
+          "min": "0",
+          "max": "1",
+          "default": "0.95",
+          "optional": true
+        }
+      ],
+      "payload": ""
+    },
+    {
+      "id": "2",
+      "name": "text-embedding-3-large",
+      "modelId": "text-embedding-3-large",
+      "status": "active",
+      "vendor": "OpenAI",
+      "type": "Embedding",
+      "version": "v.latest",
+      "contextWindow": "8K",
+      "costPer1M": "$0.13",
+      "latency": "0.2s",
+      "usage": "8,934,560",
+      "description": "High-performance text embedding model for semantic search and classification.",
+      "modelLink": "https://api.openai.com/v1/embeddings",
+      "propertyKey": "embedding",
+      "maxTokens": "8192",
+      "retirementDate": "",
+      "togglePlayground": false,
+      "toggleBYA": false,
+      "toggleAPI": true,
+      "selectedFormats": [
+        "json"
+      ],
+      "tags": [],
+      "note": "Approved by Admin · 2024-01-10",
+      "hyperparams": [
+        {
+          "id": 1,
+          "label": "dimensions",
+          "type": "Integer",
+          "min": "256",
+          "max": "3072",
+          "default": "3072",
+          "optional": true
+        }
+      ],
+      "payload": ""
+    },
+    {
+      "id": "3",
+      "name": "DALL·E 3",
+      "modelId": "dall-e-3",
+      "status": "restricted",
+      "vendor": "OpenAI",
+      "type": "Image Generation",
+      "version": "variant",
+      "contextWindow": "—",
+      "costPer1M": "$40.00",
+      "latency": "3.2s",
+      "usage": "1,204,800",
+      "description": "Advanced image generation model capable of creating photorealistic imagery from text.",
+      "modelLink": "https://api.openai.com/v1/images/generations",
+      "propertyKey": "generation",
+      "maxTokens": "4096",
+      "retirementDate": "",
+      "togglePlayground": true,
+      "toggleBYA": false,
+      "toggleAPI": true,
+      "selectedFormats": [
+        "json"
+      ],
+      "tags": [
+        "image generation"
+      ],
+      "note": "Usage limited by governance policy",
+      "hyperparams": [
+        {
+          "id": 1,
+          "label": "n",
+          "type": "Integer",
+          "min": "1",
+          "max": "10",
+          "default": "1",
+          "optional": false
+        },
+        {
+          "id": 2,
+          "label": "size",
+          "type": "Integer",
+          "min": "256",
+          "max": "1792",
+          "default": "1024",
+          "optional": false
+        }
+      ],
+      "payload": ""
+    },
+    {
+      "id": "5",
+      "name": "GPT-4o",
+      "modelId": "gpt-4o",
+      "status": "active",
+      "vendor": "OpenAI",
+      "type": "LLM",
+      "version": "v2024-05",
+      "contextWindow": "128K",
+      "costPer1M": "$5.00",
+      "latency": "0.6s",
+      "usage": "2,145,600",
+      "description": "OpenAI's most capable omni model supporting text, image, and audio.",
+      "modelLink": "https://api.openai.com/v1/chat/completions",
+      "propertyKey": "completion",
+      "maxTokens": "128000",
+      "retirementDate": "",
+      "togglePlayground": true,
+      "toggleBYA": false,
+      "toggleAPI": true,
+      "selectedFormats": [
+        "pdf",
+        "json",
+        "csv"
+      ],
+      "tags": [],
+      "note": "Approved by Admin · 2024-03-15",
+      "hyperparams": [
+        {
+          "id": 1,
+          "label": "max_tokens",
+          "type": "Integer",
+          "min": "2048",
+          "max": "65535",
+          "default": "10000",
+          "optional": false
+        },
+        {
+          "id": 2,
+          "label": "temperature",
+          "type": "Float",
+          "min": "0.0",
+          "max": "1",
+          "default": "0.5",
+          "optional": false
+        },
+        {
+          "id": 3,
+          "label": "top_p",
+          "type": "Float",
+          "min": "0",
+          "max": "1",
+          "default": "0.95",
+          "optional": true
+        }
+      ],
+      "payload": "{\n  \"model\": \"gpt-4o\",\n  \"messages\": [{\"role\": \"user\", \"content\": \"{{prompt}}\"}],\n  \"max_tokens\": {{max_tokens}}\n}"
+    },
+    {
+      "id": "6",
+      "name": "Claude 3.5 Sonnet",
+      "modelId": "claude-3-5-sonnet",
+      "status": "active",
+      "vendor": "Anthropic",
+      "type": "LLM",
+      "version": "v1.0",
+      "contextWindow": "200K",
+      "costPer1M": "$3.00",
+      "latency": "0.5s",
+      "usage": "589,200",
+      "description": "Anthropic's most intelligent model, optimised for complex reasoning tasks.",
+      "modelLink": "https://api.anthropic.com/v1/messages",
+      "propertyKey": "completion",
+      "maxTokens": "200000",
+      "retirementDate": "",
+      "togglePlayground": true,
+      "toggleBYA": false,
+      "toggleAPI": true,
+      "selectedFormats": [
+        "pdf",
+        "json",
+        "docx"
+      ],
+      "tags": [],
+      "note": "Approved by Admin · 2024-04-02",
+      "hyperparams": [
+        {
+          "id": 1,
+          "label": "max_tokens",
+          "type": "Integer",
+          "min": "2048",
+          "max": "200000",
+          "default": "10000",
+          "optional": false
+        },
+        {
+          "id": 2,
+          "label": "temperature",
+          "type": "Float",
+          "min": "0.0",
+          "max": "1",
+          "default": "0.5",
+          "optional": false
+        }
+      ],
+      "payload": "{\n  \"model\": \"claude-3-5-sonnet-20241022\",\n  \"messages\": [{\"role\": \"user\", \"content\": \"{{prompt}}\"}],\n  \"max_tokens\": {{max_tokens}}\n}"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
